@@ -4,6 +4,9 @@ import Image from 'next/image';
 import { footerLinks } from '@/constants';
 
 const Footer = () => {
+  const year = new Date().getFullYear();
+  console.log('Year: ' + year);
+
   return (
     <footer className='flex flex-col text-black-100  mt-5 border-t border-gray-100'>
       <div className='flex max-md:flex-col flex-wrap justify-between gap-5 sm:px-16 px-6 py-10'>
@@ -16,7 +19,7 @@ const Footer = () => {
             className='object-contain'
           />
           <p className='text-base text-gray-700'>
-            Carhub 2023 <br />
+            Carhub {year} <br />
             All Rights Reserved &copy;
           </p>
         </div>
@@ -41,7 +44,7 @@ const Footer = () => {
       </div>
 
       <div className='flex justify-between items-center flex-wrap mt-10 border-t border-gray-100 sm:px-16 px-6 py-10'>
-        <p>@2023 CarHub. All rights reserved</p>
+        <p>@ {year} CarHub. All rights reserved</p>
 
         <div className='footer__copyrights-link'>
           <Link href='/' className='text-gray-500'>
